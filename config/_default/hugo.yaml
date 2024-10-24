@@ -1,0 +1,87 @@
+baseurl: https://blog.baidd.cn/
+languageCode: zh-cn
+theme: hugo-theme-stack
+title: 一蓑烟雨任平生
+copyright: 一蓑烟雨任平生
+
+# Theme i18n support
+# Available values: ar, bn, ca, de, el, en, es, fr, hu, id, it, ja, ko, nl, pt-br, th, uk, zh-cn, zh-hk, zh-tw
+DefaultContentLanguage: zh-cn
+
+# Set hasCJKLanguage to true if DefaultContentLanguage is in [zh-cn ja ko]
+# This will make .Summary and .WordCount behave correctly for CJK languages.
+hasCJKLanguage: true
+
+languages:
+    en:
+        languageName: English
+        title: Example Site
+        weight: 1
+        params:
+            sidebar:
+                subtitle: Example description
+    zh-cn:
+        languageName: 中文
+        title: 一蓑烟雨任平生
+        weight: 2
+        params:
+            sidebar:
+                subtitle: 欢迎来到我的blog
+
+services:
+    # Change it to your Disqus shortname before using
+    # disqus:
+    #     shortname: "hugo-theme-stack"
+    # GA Tracking ID
+    googleAnalytics:
+        id:
+
+pagination:
+    pagerSize: 5
+
+permalinks:
+    post: /p/:slug/
+    categories: /c/:slug/
+    page: /:slug/
+
+
+related:
+    includeNewer: true
+    threshold: 60
+    toLower: false
+    indices:
+        - name: tags
+          weight: 100
+
+        - name: categories
+          weight: 200
+
+markup:
+    goldmark:
+        extensions:
+            passthrough:
+                enable: true
+                delimiters:
+                    block:
+                        - - \[
+                          - \]
+                        - - $$
+                          - $$
+                    inline:
+                        - - \(
+                          - \)
+        renderer:
+            ## Set to true if you have HTML content inside Markdown
+            unsafe: true
+    tableOfContents:
+        endLevel: 4
+        ordered: true
+        startLevel: 2
+    highlight:
+        noClasses: false
+        codeFences: true
+        guessSyntax: true
+        lineNoStart: 1
+        lineNos: true
+        lineNumbersInTable: true
+        tabWidth: 4

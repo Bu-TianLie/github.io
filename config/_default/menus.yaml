@@ -1,0 +1,38 @@
+### Custom menu
+### See https://stack.jimmycai.com/config/menu
+### To remove about, archive and search page menu item, remove `menu` field from their FrontMatter
+
+main:
+    - name: 分类
+      identifier: categories
+      pageRef: /categories
+      weight: -90
+      params:
+       icon: categories
+
+    # - name: 文档
+    #   params:
+    #     rel: external
+    # #   pre: <i class="fa fa-heart"></i>
+    #   url: https://www.baidd.cn/
+    #   weight: 30
+    # - name: Hugo
+    #   params:
+    #     rel: external
+    #   pre: <i class="fa fa-heart"></i>
+    #   url: https://gohugo.io/
+    #   weight: 30
+    #   newTab: true
+
+social:
+    - identifier: github
+      name: GitHub
+      url: https://github.com/Bu-TianLie
+      params:
+          icon: brand-github
+
+    - identifier: twitter
+      name: Twitter
+      url: https://twitter.com
+      params:
+          icon: brand-twitter
